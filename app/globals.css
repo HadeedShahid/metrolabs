@@ -1,4 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
+
+@layer base {
+  :root {
+    --color-primary: 0 100% 99%;
+    --color-secondary: 0 0% 14%;
+    --color-accent: 183 100% 35%;
+  }
+}
+
+@layer utilities {
+  .title-hero {
+    @apply text-7xl font-medium leading-[5.4rem] tracking-tighter;
+  }
+  .desc-hero {
+    @apply text-xl font-light;
+  }
+}
