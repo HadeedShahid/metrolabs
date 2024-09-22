@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 
 const Hero = () => {
   return (
-    <div className="bg-primary flex flex-col justify-center h-screen text-center gap-y-12">
+    <div className="relative bg-transparent flex flex-col justify-center h-screen text-center gap-y-12">
       <div className="flex flex-col max-w-2xl mx-auto gap-y-5">
         <h1 className="title-hero">Ideate. Build. Ship.</h1>
         <h2 className="desc-hero">
@@ -13,8 +13,8 @@ const Hero = () => {
       </div>
 
       <div className="flex flex-row gap-x-4 mx-auto">
-        <Button>Destructive</Button>
-        <Button>Book a Call</Button>
+        <Button>Get a Quote</Button>
+        <Button variant={"secondary"}>Book a Call</Button>
       </div>
     </div>
   );
