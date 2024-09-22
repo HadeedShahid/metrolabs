@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../ui/button";
+import ContactUs from "../contactUs";
 
 const Hero = () => {
   return (
@@ -15,6 +16,7 @@ const Hero = () => {
       <div className="flex flex-row gap-x-4 mx-auto">
         <Button>Get a Quote</Button>
         <Button variant={"secondary"}>Book a Call</Button>
+        <ContactUs />
       </div>
     </div>
   );

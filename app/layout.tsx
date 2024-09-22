@@ -21,13 +21,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={cx(
-          `${poppins.variable} font-sans`,
-          "max-w-7xl mx-auto mt-8"
-        )}
-      >
-        {children}
+      <body className={cx(`${poppins.variable} font-sans`)}>
+        <div className="max-w-7xl mt-8 mx-auto">{children}</div>
       </body>
     </html>
   );

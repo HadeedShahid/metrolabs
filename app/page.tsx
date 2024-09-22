@@ -9,10 +9,12 @@ import { Portfolio } from "@/components/portfolio";
 import Faqs from "@/components/faqs";
 import { HeroHighlight } from "@/components/ui/hero-highlight";
 import Hero from "@/components/hero";
+import { NavDock } from "@/components/navDock";
 
 const Home = () => {
   return (
     <div>
+      {/* <NavDock /> */}
       <Navbar />
       <Hero />
       <HeroHighlight />
