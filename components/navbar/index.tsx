@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Button } from "../ui/button";
+import BookCall from "../bookCall";
 
 const Navbar = () => {
   return (
@@ -18,7 +19,7 @@ const Navbar = () => {
           <li>Pricing</li>
           <li>Contact</li>
         </ul>
-        <Button variant={"secondary"}>Book a Call</Button>
+        <BookCall />
       </div>
     </div>
   );

@@ -33,12 +33,13 @@ import {
 import { Label } from "@/components/ui/label";
 import { Input } from "../ui/input";
 import Link from "next/link";
-const ContactUs = () => {
+import { Textarea } from "../ui/textarea";
+const BookCall = () => {
   const [open, setOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const formSchema = z.object({
-    name: z.string().min(2).max(50),
+    name: z.string().min(1, { message: "Name is required" }).max(50),
     email: z.string().min(1, { message: "Email is required" }).email(),
     country: z.string().min(1, { message: "Country is required" }),
     message: z.string().min(1, { message: "Message is required" }),
@@ -59,19 +60,27 @@ const ContactUs = () => {
     console.log(values);
     // setTimeout(() => {}, 2000);
     // setIsLoading(false);
+    form.reset();
   }
 
   return (
     <>
-      <Dialog>
+      <Dialog
+        onOpenChange={(e) => {
+          if (!e) {
+            form.reset();
+          }
+        }}
+      >
         <DialogTrigger asChild>
-          <Button variant="outline">Edit Profile</Button>
+          <Button variant={"secondary"}>Book a Call</Button>
         </DialogTrigger>
-        <DialogContent className="sm:max-w-[425px]">
+        <DialogContent className="w-full ">
           <DialogHeader>
-            <DialogTitle>Edit profile</DialogTitle>
+            <DialogTitle>Contact us</DialogTitle>
             <DialogDescription>
-              Make changes to your profile here. Click save when you're done.
+              Book a call with us to discuss your project needs. We're here to
+              assist with any inquiries and provide tailored solutions.
             </DialogDescription>
           </DialogHeader>
           <Form {...form}>
@@ -116,12 +125,16 @@ const ContactUs = () => {
                   <FormItem>
                     <FormLabel>Country</FormLabel>
                     <Select
+                      value={field.value}
                       onValueChange={field.onChange}
                       defaultValue={field.value}
                     >
                       <FormControl>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select a verified email to display" />
+                          <SelectValue
+                            className="text-slate-500"
+                            placeholder="Select your country"
+                          />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
@@ -147,7 +160,7 @@ const ContactUs = () => {
                   <FormItem>
                     <FormLabel>Message</FormLabel>
                     <FormControl>
-                      <Input placeholder="Leave a message" {...field} />
+                      <Textarea placeholder="Leave a message" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -166,4 +179,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default BookCall;

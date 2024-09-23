@@ -1,7 +1,6 @@
 import React from "react";
 import { Button } from "../ui/button";
-import ContactUs from "../contactUs";
-
+import BookCall from "../bookCall";
 const Hero = () => {
   return (
     <div className="relative bg-transparent flex flex-col justify-center h-screen text-center gap-y-12">
@@ -15,8 +14,7 @@ const Hero = () => {
 
       <div className="flex flex-row gap-x-4 mx-auto">
         <Button>Get a Quote</Button>
-        <Button variant={"secondary"}>Book a Call</Button>
-        <ContactUs />
+        <BookCall />
       </div>
     </div>
   );
