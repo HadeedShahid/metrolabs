@@ -1,4 +1,36 @@
-import { IconStack } from "@/icons";
+import {
+  IconRocket,
+  IconBusiness,
+  IconEnterprise,
+  IconStack,
+  IconNextjs,
+  IconReactjs,
+  IconFigma,
+  IconJavascript,
+  IconTypescript,
+  IconTailwind,
+  IconFramer,
+  IconRedux,
+  IconGraphql,
+  IconSass,
+  IconSupabase,
+  IconPrisma,
+  IconMysql,
+  IconPostgres,
+  IconMongodb,
+  IconNodejs,
+  IconFirebase,
+  IconPython,
+  IconHtml,
+  IconCss,
+  IconAlgolia,
+  IconBootstrap,
+  IconAntd,
+  IconChakraui,
+  Iconi18next,
+  IconShadcn,
+  IconZod,
+} from "@/icons";
 import React from "react";
 import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
 import Image from "next/image";
@@ -24,33 +56,112 @@ const ExploreStacks = () => {
 
 const testimonials = [
   {
-    quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
+    name: "Next.js",
+    logo: <IconNextjs />,
   },
   {
-    quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
+    name: "React.js",
+    logo: <IconReactjs />,
   },
   {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
+    name: "Figma",
+    logo: <IconFigma />,
   },
   {
-    quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
+    name: "JavaScript",
+    logo: <IconJavascript />,
   },
   {
-    quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
+    name: "TypeScript",
+    logo: <IconTypescript />,
+  },
+  {
+    name: "Tailwind CSS",
+    logo: <IconTailwind />,
+  },
+  {
+    name: "Framer",
+    logo: <IconFramer />,
+  },
+  {
+    name: "Redux",
+    logo: <IconRedux />,
+  },
+  {
+    name: "GraphQL",
+    logo: <IconGraphql />,
+  },
+  {
+    name: "Sass",
+    logo: <IconSass />,
+  },
+  {
+    name: "Supabase",
+    logo: <IconSupabase />,
+  },
+  {
+    name: "Prisma",
+    logo: <IconPrisma />,
+  },
+  {
+    name: "MySQL",
+    logo: <IconMysql />,
+  },
+  {
+    name: "PostgreSQL",
+    logo: <IconPostgres />,
+  },
+  {
+    name: "MongoDB",
+    logo: <IconMongodb />,
+  },
+  {
+    name: "Node.js",
+    logo: <IconNodejs />,
+  },
+  {
+    name: "Firebase",
+    logo: <IconFirebase />,
+  },
+  {
+    name: "Python",
+    logo: <IconPython />,
+  },
+  {
+    name: "HTML",
+    logo: <IconHtml />,
+  },
+  {
+    name: "CSS",
+    logo: <IconCss />,
+  },
+  {
+    name: "Algolia",
+    logo: <IconAlgolia />,
+  },
+  {
+    name: "Bootstrap",
+    logo: <IconBootstrap />,
+  },
+  {
+    name: "Ant Design",
+    logo: <IconAntd />,
+  },
+  {
+    name: "Chakra UI",
+    logo: <IconChakraui />,
+  },
+  {
+    name: "i18next",
+    logo: <Iconi18next />,
+  },
+  {
+    name: "Shadcn",
+    logo: <IconShadcn />,
+  },
+  {
+    name: "Zod",
+    logo: <IconZod />,
   },
 ];
 

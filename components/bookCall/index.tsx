@@ -2,7 +2,7 @@
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import React, { useState } from "react";
+import React, { MouseEventHandler, useState } from "react";
 import { Modal } from "antd";
 import { Button } from "@/components/ui/button";
 import {
@@ -34,7 +34,11 @@ import { Label } from "@/components/ui/label";
 import { Input } from "../ui/input";
 import Link from "next/link";
 import { Textarea } from "../ui/textarea";
-const BookCall = () => {
+const BookCall = ({
+  onClick = () => {},
+}: {
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+}) => {
   const [open, setOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -73,7 +77,9 @@ const BookCall = () => {
         }}
       >
         <DialogTrigger asChild>
-          <Button variant={"secondary"}>Book a Call</Button>
+          <Button onClick={onClick} variant={"secondary"}>
+            Book a Call
+          </Button>
         </DialogTrigger>
         <DialogContent className="w-full ">
           <DialogHeader>

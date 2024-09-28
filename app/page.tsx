@@ -10,6 +10,7 @@ import Faqs from "@/components/faqs";
 import { HeroHighlight } from "@/components/ui/hero-highlight";
 import Hero from "@/components/hero";
 import { NavDock } from "@/components/navDock";
+import Footer from "@/components/footer";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
       <ExploreStacks />
       <Portfolio />
       <Faqs />
+      <Footer />
     </div>
   );
 };

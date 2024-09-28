@@ -6,6 +6,7 @@ import { useOutsideClick } from "@/hooks/use-outside-click";
 import { IconBuildingArch, IconBuildings } from "@tabler/icons-react";
 import { IconBusiness, IconEnterprise, IconRocket } from "@/icons";
 import Link from "next/link";
+import BookCall from "../bookCall";
 
 export default function OurClients() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -74,51 +75,28 @@ export default function OurClients() {
               ref={ref}
               className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
-              <motion.div layoutId={`image-${active.title}-${id}`}>
-                {active.icon}
-              </motion.div>
-
-              <div>
-                <div className="flex justify-between items-start p-4">
-                  <div className="">
+              <div className="flex justify-between items-start p-8">
+                <div className="flex flex-col justify-between gap-4">
+                  <div className="flex flex-col gap-4">
+                    <motion.div layoutId={`image-${active.title}-${id}`}>
+                      {active.icon}
+                    </motion.div>
                     <motion.h3
                       layoutId={`title-${active.title}-${id}`}
-                      className="font-medium text-neutral-700 dark:text-neutral-200 text-base"
+                      className="heading"
                     >
                       {active.title}
                     </motion.h3>
-                    <motion.p
-                      layoutId={`description-${active.description}-${id}`}
-                      className="text-neutral-600 dark:text-neutral-400 text-base"
-                    >
-                      {active.description}
-                    </motion.p>
                   </div>
 
-                  <motion.a
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    href={active.ctaLink}
-                    target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
-                  >
-                    {active.ctaText}
-                  </motion.a>
-                </div>
-                <div className="pt-4 relative px-4">
-                  <motion.div
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                  <motion.p
+                    layoutId={`description-${active.description}-${id}`}
+                    className="text-base"
                   >
                     {typeof active.content === "function"
                       ? active.content()
                       : active.content}
-                  </motion.div>
+                  </motion.p>
                 </div>
               </div>
             </motion.div>
@@ -206,18 +184,25 @@ const cards = [
     icon: <IconRocket />,
     content: () => {
       return (
-        <p>
-          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
-          her melancholic and cinematic music style. Born Elizabeth Woolridge
-          Grant in New York City, she has captivated audiences worldwide with
-          her haunting voice and introspective lyrics. <br /> <br /> Her songs
-          often explore themes of tragic romance, glamour, and melancholia,
-          drawing inspiration from both contemporary and vintage pop culture.
-          With a career that has seen numerous critically acclaimed albums, Lana
-          Del Rey has established herself as a unique and influential figure in
-          the music industry, earning a dedicated fan base and numerous
-          accolades.
-        </p>
+        <div>
+          <p>
+            Startups are the driving force of innovation. We collaborate with
+            entrepreneurs to turn ideas into reality, focusing on building{" "}
+            <strong>Minimum Viable Products (MVPs)</strong>
+            that help you enter the market quickly and efficiently.
+          </p>
+          <br></br>
+          <p>
+            Our <strong>agile development process</strong> ensures you are
+            always moving forward.
+          </p>
+          <br></br>
+          <p>
+            Whether you’re at the ideation stage or ready to scale, our team
+            provides the <strong>technical expertise</strong> and strategic
+            guidance you need to grow.
+          </p>
+        </div>
       );
     },
   },
@@ -231,17 +216,26 @@ const cards = [
     icon: <IconBusiness />,
     content: () => {
       return (
-        <p>
-          Babu Maan, a legendary Punjabi singer, is renowned for his soulful
-          voice and profound lyrics that resonate deeply with his audience. Born
-          in the village of Khant Maanpur in Punjab, India, he has become a
-          cultural icon in the Punjabi music industry. <br /> <br /> His songs
-          often reflect the struggles and triumphs of everyday life, capturing
-          the essence of Punjabi culture and traditions. With a career spanning
-          over two decades, Babu Maan has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
-        </p>
+        <div>
+          <p>
+            Businesses thrive on operational efficiency and growth. We work with
+            you to optimize your processes and create{" "}
+            <strong>custom solutions</strong> that address your unique
+            challenges, helping you scale smoothly and sustainably.
+          </p>
+          <br></br>
+          <p>
+            Our <strong>agile development approach</strong> enables quick
+            adaptation to your changing business needs, ensuring continuous
+            improvement.
+          </p>
+          <br></br>
+          <p>
+            Whether it's improving existing systems or building new platforms,
+            we offer the <strong>technical expertise</strong> and strategic
+            support to drive your business forward.
+          </p>
+        </div>
       );
     },
   },
@@ -256,17 +250,28 @@ const cards = [
     icon: <IconEnterprise />,
     content: () => {
       return (
-        <p>
-          Metallica, an iconic American heavy metal band, is renowned for their
-          powerful sound and intense performances that resonate deeply with
-          their audience. Formed in Los Angeles, California, they have become a
-          cultural icon in the heavy metal music industry. <br /> <br /> Their
-          songs often reflect themes of aggression, social issues, and personal
-          struggles, capturing the essence of the heavy metal genre. With a
-          career spanning over four decades, Metallica has released numerous hit
-          albums and singles that have garnered them a massive fan following
-          both in the United States and abroad.
-        </p>
+        <div>
+          <p>
+            Enterprises require robust, scalable solutions to manage complex
+            operations and drive growth. We specialize in delivering{" "}
+            <strong>enterprise-grade systems</strong> that support your
+            large-scale needs while maintaining flexibility for future
+            innovation.
+          </p>
+          <br></br>
+          <p>
+            With our <strong>agile methodology</strong>, we ensure your
+            organization stays competitive by continuously refining your digital
+            infrastructure.
+          </p>
+          <br></br>
+          <p>
+            From optimizing existing systems to creating{" "}
+            <strong>customized enterprise solutions</strong>, our team brings
+            the <strong>technical expertise</strong>
+            and strategic foresight to help you succeed in a dynamic market.
+          </p>
+        </div>
       );
     },
   },

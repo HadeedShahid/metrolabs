@@ -7,7 +7,7 @@ import {
 
 export default function Faqs() {
   return (
-    <div className="mt-48 flex flex-col gap-10 ">
+    <div className="mt-36 flex flex-col gap-10 ">
       <h2 className="subtitle">Frequently asked questions (FAQs)</h2>
       <Accordion type="single" collapsible className="w-2/3 space-y-4 ">
         {faqsData.map((item, index) => (
