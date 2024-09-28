@@ -85,8 +85,9 @@ const BookCall = ({
           <DialogHeader>
             <DialogTitle>Contact us</DialogTitle>
             <DialogDescription>
-              Book a call with us to discuss your project needs. We're here to
-              assist with any inquiries and provide tailored solutions.
+              {
+                "Book a call with us to discuss your project needs. We're here to assist with any inquiries and provide tailored solutions."
+              }
             </DialogDescription>
           </DialogHeader>
           <Form {...form}>

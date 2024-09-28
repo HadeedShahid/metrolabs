@@ -231,9 +231,9 @@ const cards = [
           </p>
           <br></br>
           <p>
-            Whether it's improving existing systems or building new platforms,
-            we offer the <strong>technical expertise</strong> and strategic
-            support to drive your business forward.
+            {
+              "Whether it's improving existing systems or building new platforms, we offer the <strong>technical expertise</strong> and strategic support to drive your business forward."
+            }
           </p>
         </div>
       );
