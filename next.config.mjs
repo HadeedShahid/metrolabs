@@ -14,6 +14,17 @@ const nextConfig = {
         port: "",
         // pathname: "/account123/**",
       },
+      {
+        protocol: "https",
+        hostname: "miro.medium.com",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname:
+          "upwork-usw2-prod-agora-file-storage.s3.us-west-2.amazonaws.com",
+        port: "",
+      },
     ],
   },
 };
