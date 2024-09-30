@@ -1,10 +1,11 @@
 import Image from "next/image";
 import React from "react";
 import { Button } from "../ui/button";
+import BookCall from "../bookCall";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center">
+    <div className="relative flex justify-between items-center">
       <Image
         src={"/metrolabslogo.svg"}
         alt="metro labs logo"
@@ -12,13 +13,13 @@ const Navbar = () => {
         height={51}
       />
       <div className="flex justify-between items-center gap-x-6">
-        <ul className="flex justify-between items-center gap-x-4">
+        <ul className="flex justify-between items-center gap-x-4 body-base">
           <li>Portfolio</li>
           <li>Careers</li>
           <li>Pricing</li>
           <li>Contact</li>
         </ul>
-        <Button>Book a Call</Button>
+        <BookCall />
       </div>
     </div>
   );

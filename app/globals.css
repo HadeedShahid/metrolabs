@@ -17,4 +17,16 @@
   .desc-hero {
     @apply text-xl font-light;
   }
+  .body-small {
+    @apply text-sm;
+  }
+  .body-base {
+    @apply text-base;
+  }
+  .subtitle {
+    @apply text-3xl font-medium;
+  }
+  .heading {
+    @apply font-semibold text-2xl;
+  }
 }
