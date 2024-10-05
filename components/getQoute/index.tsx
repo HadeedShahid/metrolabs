@@ -35,45 +35,34 @@ import { Input } from "../ui/input";
 import Link from "next/link";
 import { Textarea } from "../ui/textarea";
 import { Slider } from "../ui/slider";
+import { filterObj } from "@/utils/constants";
+import { getQouteCost } from "@/app/actions";
+import { qouteFormSchema } from "@/utils/formSchema";
+
 const GetQoute = () => {
-  const [open, setOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const formSchema = z.object({
-    projectType: z.string().min(1, { message: "Select a project type" }),
-    design: z.string().min(1, { message: "Select design option" }),
-    development: z.string().min(1, { message: "Select development option" }),
-    numOfPages: z.string().min(1, { message: "Select number of pages" }),
-    timeline: z.string().min(1, { message: "Select a project timeline" }),
-    targetAudience: z
-      .string()
-      .min(1, { message: "Select your target audience" }),
-    maintainanceAndSupport: z
-      .string()
-      .min(1, { message: "Select a maintainance plan" }),
-    budget: z.number().min(1, { message: "Select the project budget" }),
-  });
-
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof qouteFormSchema>>({
+    resolver: zodResolver(qouteFormSchema),
     defaultValues: {
       projectType: "",
       design: "",
       development: "",
       numOfPages: "",
       timeline: "",
-      targetAudience: "",
+      platformType: "",
       maintainanceAndSupport: "",
       budget: 200,
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // setIsLoading(true);
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof qouteFormSchema>) {
+    setIsLoading(true);
+    const cost = await getQouteCost(values);
+    console.log(cost);
     // setTimeout(() => {}, 2000);
-    // setIsLoading(false);
-    form.reset();
+    setIsLoading(false);
+    // form.reset();
   }
 
   return (
@@ -88,6 +77,7 @@ const GetQoute = () => {
         <DialogTrigger asChild>
           <Button>Get a Qoute</Button>
         </DialogTrigger>
+
         <DialogContent>
           <DialogHeader>
             <DialogTitle>Get a Qoute</DialogTitle>
@@ -107,7 +97,7 @@ const GetQoute = () => {
                 name="projectType"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Project Type</FormLabel>
+                    <FormLabel>{filterObj.projectType.label}</FormLabel>
                     <Select
                       value={field.value}
                       onValueChange={field.onChange}
@@ -122,15 +112,13 @@ const GetQoute = () => {
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        <SelectItem value="m@example.com">
-                          m@example.com
-                        </SelectItem>
-                        <SelectItem value="m@google.com">
-                          m@google.com
-                        </SelectItem>
-                        <SelectItem value="m@support.com">
-                          m@support.com
-                        </SelectItem>
+                        {filterObj.projectType.options.map((item) => {
+                          return (
+                            <SelectItem key={item.value} value={item.value}>
+                              {item.label}
+                            </SelectItem>
+                          );
+                        })}
                       </SelectContent>
                     </Select>
                     <FormMessage />
@@ -143,7 +131,7 @@ const GetQoute = () => {
                   name="design"
                   render={({ field }) => (
                     <FormItem className="basis-1/2">
-                      <FormLabel>Design</FormLabel>
+                      <FormLabel>{filterObj.design.label}</FormLabel>
                       <Select
                         value={field.value}
                         onValueChange={field.onChange}
@@ -158,15 +146,13 @@ const GetQoute = () => {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="m@example.com">
-                            m@example.com
-                          </SelectItem>
-                          <SelectItem value="m@google.com">
-                            m@google.com
-                          </SelectItem>
-                          <SelectItem value="m@support.com">
-                            m@support.com
-                          </SelectItem>
+                          {filterObj.design.options.map((item) => {
+                            return (
+                              <SelectItem key={item.value} value={item.value}>
+                                {item.label}
+                              </SelectItem>
+                            );
+                          })}
                         </SelectContent>
                       </Select>
                       <FormMessage />
@@ -178,7 +164,7 @@ const GetQoute = () => {
                   name="development"
                   render={({ field }) => (
                     <FormItem className="basis-1/2">
-                      <FormLabel>Development</FormLabel>
+                      <FormLabel>{filterObj.development.label}</FormLabel>
                       <Select
                         value={field.value}
                         onValueChange={field.onChange}
@@ -193,15 +179,13 @@ const GetQoute = () => {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="m@example.com">
-                            m@example.com
-                          </SelectItem>
-                          <SelectItem value="m@google.com">
-                            m@google.com
-                          </SelectItem>
-                          <SelectItem value="m@support.com">
-                            m@support.com
-                          </SelectItem>
+                          {filterObj.development.options.map((item) => {
+                            return (
+                              <SelectItem key={item.value} value={item.value}>
+                                {item.label}
+                              </SelectItem>
+                            );
+                          })}
                         </SelectContent>
                       </Select>
                       <FormMessage />
@@ -216,7 +200,7 @@ const GetQoute = () => {
                   name="numOfPages"
                   render={({ field }) => (
                     <FormItem className="basis-1/2">
-                      <FormLabel>No. of pages</FormLabel>
+                      <FormLabel>{filterObj.numOfPages.label}</FormLabel>
                       <Select
                         value={field.value}
                         onValueChange={field.onChange}
@@ -231,15 +215,13 @@ const GetQoute = () => {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="m@example.com">
-                            m@example.com
-                          </SelectItem>
-                          <SelectItem value="m@google.com">
-                            m@google.com
-                          </SelectItem>
-                          <SelectItem value="m@support.com">
-                            m@support.com
-                          </SelectItem>
+                          {filterObj.numOfPages.options.map((item) => {
+                            return (
+                              <SelectItem key={item.value} value={item.value}>
+                                {item.label}
+                              </SelectItem>
+                            );
+                          })}
                         </SelectContent>
                       </Select>
                       <FormMessage />
@@ -251,7 +233,7 @@ const GetQoute = () => {
                   name="timeline"
                   render={({ field }) => (
                     <FormItem className="basis-1/2">
-                      <FormLabel>Timeline</FormLabel>
+                      <FormLabel>{filterObj.timeline.label}</FormLabel>
                       <Select
                         value={field.value}
                         onValueChange={field.onChange}
@@ -266,15 +248,13 @@ const GetQoute = () => {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="m@example.com">
-                            m@example.com
-                          </SelectItem>
-                          <SelectItem value="m@google.com">
-                            m@google.com
-                          </SelectItem>
-                          <SelectItem value="m@support.com">
-                            m@support.com
-                          </SelectItem>
+                          {filterObj.timeline.options.map((item) => {
+                            return (
+                              <SelectItem key={item.value} value={item.value}>
+                                {item.label}
+                              </SelectItem>
+                            );
+                          })}
                         </SelectContent>
                       </Select>
                       <FormMessage />
@@ -286,10 +266,10 @@ const GetQoute = () => {
               <div className="flex justify-between gap-10">
                 <FormField
                   control={form.control}
-                  name="targetAudience"
+                  name="platformType"
                   render={({ field }) => (
                     <FormItem className="basis-1/2">
-                      <FormLabel>Target Audience</FormLabel>
+                      <FormLabel>{filterObj.platformType.label}</FormLabel>
                       <Select
                         value={field.value}
                         onValueChange={field.onChange}
@@ -304,15 +284,13 @@ const GetQoute = () => {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="m@example.com">
-                            m@example.com
-                          </SelectItem>
-                          <SelectItem value="m@google.com">
-                            m@google.com
-                          </SelectItem>
-                          <SelectItem value="m@support.com">
-                            m@support.com
-                          </SelectItem>
+                          {filterObj.platformType.options.map((item) => {
+                            return (
+                              <SelectItem key={item.value} value={item.value}>
+                                {item.label}
+                              </SelectItem>
+                            );
+                          })}
                         </SelectContent>
                       </Select>
                       <FormMessage />
@@ -324,7 +302,9 @@ const GetQoute = () => {
                   name="maintainanceAndSupport"
                   render={({ field }) => (
                     <FormItem className="basis-1/2">
-                      <FormLabel>Maintenance and Support</FormLabel>
+                      <FormLabel>
+                        {filterObj.maintainanceAndSupport.label}
+                      </FormLabel>
                       <Select
                         value={field.value}
                         onValueChange={field.onChange}
@@ -339,15 +319,15 @@ const GetQoute = () => {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="m@example.com">
-                            m@example.com
-                          </SelectItem>
-                          <SelectItem value="m@google.com">
-                            m@google.com
-                          </SelectItem>
-                          <SelectItem value="m@support.com">
-                            m@support.com
-                          </SelectItem>
+                          {filterObj.maintainanceAndSupport.options.map(
+                            (item) => {
+                              return (
+                                <SelectItem key={item.value} value={item.value}>
+                                  {item.label}
+                                </SelectItem>
+                              );
+                            }
+                          )}
                         </SelectContent>
                       </Select>
                       <FormMessage />
@@ -362,23 +342,20 @@ const GetQoute = () => {
                 render={({ field: { value, onChange } }) => (
                   <FormItem>
                     <div className="flex justify-between">
-                      <FormLabel>Budget</FormLabel>
+                      <FormLabel>{filterObj.budget.label}</FormLabel>
                       <div>${value}</div>
                     </div>
                     <FormControl>
                       <Slider
-                        min={200}
-                        max={10000}
-                        step={100}
+                        min={filterObj.budget.min}
+                        max={filterObj.budget.max}
+                        step={filterObj.budget.step}
                         defaultValue={[value]}
                         onValueChange={(vals) => {
                           onChange(vals[0]);
                         }}
                       />
                     </FormControl>
-                    <FormDescription>
-                      This is a description for the price.
-                    </FormDescription>
                     <FormMessage />
                   </FormItem>
                 )}
