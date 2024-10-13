@@ -9,7 +9,7 @@ export function Portfolio() {
   ));
 
   return (
-    <div className="mt-48 w-full h-full">
+    <div className="mt-40 w-full h-full">
       <h2 className="subtitle">Explore our works</h2>
       <Carousel items={cards} />
     </div>
