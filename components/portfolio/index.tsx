@@ -86,7 +86,7 @@ const data = [
         ),
         image: (
           <Image
-            src="/images/hero/landing-hero.png"
+            src="/images/homify/landing-hero.png"
             alt="Macbook mockup from Aceternity UI"
             height="500"
             width="500"
@@ -109,7 +109,7 @@ const data = [
         ),
         image: (
           <Image
-            src="/images/hero/landing-bento.png"
+            src="/images/homify/landing-bento.png"
             alt="Macbook mockup from Aceternity UI"
             height="500"
             width="500"
@@ -131,7 +131,7 @@ const data = [
         ),
         image: (
           <Image
-            src="/images/hero/listing-filters.png"
+            src="/images/homify/listing-filters.png"
             alt="Macbook mockup from Aceternity UI"
             height="500"
             width="500"
@@ -153,7 +153,7 @@ const data = [
         ),
         image: (
           <Image
-            src="/images/hero/listing-banner.png"
+            src="/images/homify/listing-banner.png"
             alt="Macbook mockup from Aceternity UI"
             height="500"
             width="500"
@@ -177,14 +177,14 @@ const data = [
         image: (
           <>
             <Image
-              src="/images/hero/detail-gallery.png"
+              src="/images/homify/detail-gallery.png"
               alt="Macbook mockup from Aceternity UI"
               height="500"
               width="500"
               className="md:w-1/2 h-full w-full mx-auto object-cover"
             />
             <Image
-              src="/images/hero/detail-map.png"
+              src="/images/homify/detail-map.png"
               alt="Macbook mockup from Aceternity UI"
               height="500"
               width="500"
