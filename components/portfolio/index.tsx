@@ -210,7 +210,7 @@ const data = [
         ),
         image: (
           <Image
-            src="dashboard"
+            src="/images/edubridge/dashboard.png"
             alt="Macbook mockup from Aceternity UI"
             height="500"
             width="500"
@@ -229,7 +229,7 @@ const data = [
         ),
         image: (
           <Image
-            src="view-history"
+            src="/images/edubridge/view-history.png"
             alt="Macbook mockup from Aceternity UI"
             height="500"
             width="500"
@@ -253,7 +253,7 @@ const data = [
         ),
         image: (
           <Image
-            src="manage-plan"
+            src="/images/edubridge/manage-plan.png"
             alt="Macbook mockup from Aceternity UI"
             height="500"
             width="500"
