@@ -1,4 +1,6 @@
-export const filterObj = {
+import { FilterObj } from "@/lib/types";
+
+export const filterObj: FilterObj = {
   projectType: {
     label: "Project Type",
     options: [

@@ -1,17 +1,21 @@
 "use server";
+import { Option } from "@/lib/types";
 import { filterObj } from "@/utils/constants";
 import { qouteFormSchema } from "@/utils/formSchema";
 import { z } from "zod";
 
-const getPrice = (category: string, value: string) => {
+const getPrice = (category: keyof typeof filterObj, value: string): number => {
   const selectedCategory = filterObj[category];
-  const selectedOption = selectedCategory.options.find(
-    (option: { label: string; value: string; price: number }) =>
-      option.value === value
-  );
-  return selectedOption ? selectedOption.price : 0;
-};
 
+  if ("options" in selectedCategory) {
+    const selectedOption = selectedCategory.options.find(
+      (option: Option) => option.value === value
+    );
+    return selectedOption ? selectedOption.price : 0;
+  }
+
+  return 0; // Return 0 for 'budget' as it doesn't have options
+};
 export async function getQouteCost(values: z.infer<typeof qouteFormSchema>) {
   const {
     projectType,
