@@ -12,7 +12,7 @@
 
 @layer utilities {
   .title-hero {
-    @apply text-7xl font-medium leading-[5.4rem] tracking-tighter;
+    @apply text-8xl font-bold;
   }
   .desc-hero {
     @apply text-xl font-light;
