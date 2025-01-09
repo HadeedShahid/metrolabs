@@ -11,6 +11,7 @@ import { HeroHighlight } from "@/components/ui/hero-highlight";
 import Hero from "@/components/hero";
 import { NavDock } from "@/components/navDock";
 import Footer from "@/components/footer";
+import Pricing from "@/components/pricing";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
       <OurClients />
       <ExploreStacks />
       <Portfolio />
+      <Pricing />
       <Faqs />
       <Footer />
     </div>
