@@ -4,10 +4,15 @@ import React from "react";
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 import {
   IconBoxAlignRightFilled,
+  IconBuildings,
   IconClipboardCopy,
   IconCloud,
+  IconDeviceDesktop,
   IconDeviceMobile,
   IconFileBroken,
+  IconGavel,
+  IconReportMoney,
+  IconShoppingBag,
   IconShoppingCart,
   IconSignature,
   IconTableColumn,
@@ -19,7 +24,7 @@ import Image from "next/image";
 export default function Services() {
   return (
     <div className="flex flex-col gap-y-10">
-      <h2 className="subtitle">Our Services</h2>
+      <h2 className="subtitle">Designs That Work for Your Business</h2>
       <BentoGrid className="w-full mx-auto md:auto-rows-[20rem]">
         {items.map((item, i) => (
           <BentoGridItem
@@ -38,22 +43,23 @@ export default function Services() {
 
 const items = [
   {
-    title: "SAAS Development",
+    title: "Tech & SaaS Companies",
     description:
-      "Scalable, secure, and efficient Software as a Service solutions.",
+      "We build scalable, modern websites that highlight your innovation and convert visitors into users.",
     className: "text-secondary md:col-span-3",
-    icon: <IconCloud className="h-9 w-9 text-secondary" />,
+    icon: <IconDeviceDesktop className="h-9 w-9 text-secondary" />,
   },
   {
-    title: "CRM Solutions",
+    title: "For Finance & Accountants",
     description:
-      "Custom CRMs to enhance customer relationships and operations.",
+      "Simplify client onboarding and showcase your financial expertise with sleek, user-friendly designs tailored for trust and accuracy.",
     className: "bg-secondary text-primary md:col-span-3",
-    icon: <IconUserCog className="h-9 w-9 text-primary" />,
+    icon: <IconReportMoney className="h-9 w-9 text-primary" />,
   },
   {
-    title: "Mobile Apps",
-    description: "Coming Soon",
+    icon: <IconShoppingBag className="h-9 w-9 text-primary" />,
+    title: "For Retail",
+    description: "From showcasing products to driving conversions",
     className: "relative bg-secondary text-primary md:row-span-2 col-span-2",
     header: (
       <Image
@@ -66,15 +72,17 @@ const items = [
     ),
   },
   {
-    title: "Ecommerce Platforms",
-    description: "User-friendly online stores designed to drive sales.",
+    title: "For Lawyers",
+    description:
+      "Your clients want confidence and clarity. We build websites that reflect your expertise and make it easy for clients to connect.",
     className: "bg-secondary text-primary md:col-span-3",
-    icon: <IconShoppingCart className="h-9 w-9 text-primary" />,
+    icon: <IconGavel className="h-9 w-9 text-primary" />,
   },
   {
-    title: "Classifieds & Marketplaces",
-    description: "Develop thriving online communities and marketplaces.",
+    title: "For Real Estate",
+    description:
+      "Make a lasting impression with websites that are visually stunning and designed to attract buyers and sellers alike.",
     className: "md:col-span-3",
-    icon: <IconTableColumn className="h-9 w-9 text-secondary" />,
+    icon: <IconBuildings className="h-9 w-9 text-secondary" />,
   },
 ];

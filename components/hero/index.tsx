@@ -15,8 +15,10 @@ const Hero = () => {
       </div>
 
       <div className="flex flex-row gap-x-4">
-        <GetQoute />
-        <BookCall />
+        <GetQoute btnSize={"lg"} />
+        <Button variant={"secondary"} size={"lg"}>
+          Start Your Project Today
+        </Button>
       </div>
     </div>
   );
