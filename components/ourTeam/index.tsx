@@ -28,7 +28,7 @@ const teamMembers = [
   {
     name: "Hamdoon",
     designation: "UX designer & developer",
-    description: "Emily's creative vision shapes the aesthetic of all our products.",
+    description: "Hamdoon creative vision shapes the aesthetic of all our products.",
     image: "/placeholder.svg?height=400&width=400",
     socials: {
       twitter: "https://twitter.com/emilybrown",
