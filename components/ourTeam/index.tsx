@@ -7,7 +7,7 @@ const teamMembers = [
   {
     name: "Hadeed",
     designation: "Founder",
-    description: "Jane has been leading our company with vision and passion for over a decade.",
+    description: "Hadeed has been leading our company with vision and passion for over a decade.",
     image: "/images/hadeed.png",
     socials: {
       upwork: "https://facebook.com/janedoe",
@@ -18,7 +18,7 @@ const teamMembers = [
   {
     name: "Safwan",
     designation: "UX designer & developer",
-    description: "John brings 15 years of tech expertise to drive our innovation forward.",
+    description: "Safwan brings 15 years of tech expertise to drive our innovation forward.",
     image: "/placeholder.svg?height=400&width=400",
     socials: {
       twitter: "https://twitter.com/johnsmith",
