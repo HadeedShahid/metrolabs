@@ -13,6 +13,7 @@ import { NavDock } from "@/components/navDock";
 import Footer from "@/components/footer";
 import Pricing from "@/components/pricing";
 import OurTeamSection from "@/components/ourTeam";
+import { AnimatedTestimonialsDemo } from "@/components/testimonials";
 
 const Home = () => {
   return (
@@ -27,6 +28,7 @@ const Home = () => {
       <Portfolio />
       <Pricing />
       <OurTeamSection/>
+      <AnimatedTestimonialsDemo/>
       <Faqs />
       <Footer />
     </div>
