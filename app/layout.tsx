@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
 import "./globals.css";
 import cx from "clsx";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-
-const poppins = Poppins({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  subsets: ["latin"],
-  variable: "--font-primary",
-});
+import { GeistSans } from 'geist/font/sans'
+import { GeistMono } from 'geist/font/mono'
 
 export const metadata: Metadata = {
   title:
@@ -30,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={cx(`${poppins.variable} font-sans`)}>
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+      <body >
         <div className="max-w-7xl mt-8 mx-auto">{children}</div>
         <Analytics />
         <SpeedInsights />

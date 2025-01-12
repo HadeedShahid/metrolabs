@@ -24,7 +24,11 @@ import Image from "next/image";
 export default function Services() {
   return (
     <div className="flex flex-col gap-y-10">
-      <h2 className="subtitle">Designs That Work for Your Business</h2>
+      <div className="flex flex-col gap-y-6 max-w-2xl">
+      <h2 className="subtitle">Designs that Work for Your Business</h2>
+      <p className="text-lg">We create custom websites that solve industry-specific challenges. No templates. No shortcuts. Just thoughtful designs crafted to help your business thrive.</p>
+      </div>
+     
       <BentoGrid className="w-full mx-auto md:auto-rows-[20rem]">
         {items.map((item, i) => (
           <BentoGridItem

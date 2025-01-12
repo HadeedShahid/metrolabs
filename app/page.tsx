@@ -12,6 +12,7 @@ import Hero from "@/components/hero";
 import { NavDock } from "@/components/navDock";
 import Footer from "@/components/footer";
 import Pricing from "@/components/pricing";
+import OurTeamSection from "@/components/ourTeam";
 
 const Home = () => {
   return (
@@ -25,6 +26,7 @@ const Home = () => {
       <ExploreStacks />
       <Portfolio />
       <Pricing />
+      <OurTeamSection/>
       <Faqs />
       <Footer />
     </div>
