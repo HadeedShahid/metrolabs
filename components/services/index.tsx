@@ -26,7 +26,7 @@ export default function Services() {
     <div className="flex flex-col gap-y-10">
       <div className="flex flex-col gap-y-6 max-w-2xl">
       <h2 className="subtitle">Designs that Work for Your Business</h2>
-      <p className="text-lg">We create custom websites that solve industry-specific challenges. No templates. No shortcuts. Just thoughtful designs crafted to help your business thrive.</p>
+      <p className="text-sm md:text-lg">We create custom websites that solve industry-specific challenges. No templates. No shortcuts. Just thoughtful designs crafted to help your business thrive.</p>
       </div>
      
       <BentoGrid className="w-full mx-auto md:auto-rows-[20rem]">
@@ -35,7 +35,7 @@ export default function Services() {
             key={i}
             title={item.title}
             description={item.description}
-            className={cn("[&>p:text-lg] p-10", item.className)}
+            className={cn("[&>p:text-lg] p-6 md:p-10", item.className)}
             icon={item.icon}
             header={item.header}
           />
@@ -64,14 +64,14 @@ const items = [
     icon: <IconShoppingBag className="h-9 w-9 text-primary" />,
     title: "For Retail",
     description: "From showcasing products to driving conversions",
-    className: "relative bg-secondary text-primary md:row-span-2 col-span-2",
+    className: "relative bg-secondary text-primary md:row-span-2 md:col-span-2",
     header: (
       <Image
         src="/images/app-mockup.png"
         width="206"
         height="426"
         alt="app mockup"
-        className="position absolute right-0 bottom-3"
+        className="hidden md:block absolute right-0 bottom-3"
       />
     ),
   },

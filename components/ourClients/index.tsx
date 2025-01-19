@@ -36,7 +36,7 @@ export default function OurClients() {
 
   return (
     <div className="flex flex-col gap-10">
-      <h2 className="subtitle mt-52">Types of Clients</h2>
+      <h2 className="subtitle md:mt-52">Types of Clients</h2>
       <AnimatePresence>
         {active && typeof active === "object" && (
           <motion.div
@@ -103,7 +103,7 @@ export default function OurClients() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="w-full grid grid-cols-3 items-start gap-4">
+      <ul className="w-full grid md:grid-cols-3 items-start gap-4">
         {cards.map((card, index) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
@@ -125,7 +125,7 @@ export default function OurClients() {
                   </motion.h3>
                   <motion.p
                     layoutId={`description-${card.description}-${id}`}
-                    className="text-center md:text-left bosy-base"
+                    className="text-left body-base"
                   >
                     {card.description}
                   </motion.p>

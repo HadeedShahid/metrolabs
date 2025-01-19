@@ -39,7 +39,7 @@ const ExploreStacks = () => {
   return (
     <div className="mt-48 min-h-[530px]">
       <div className="absolute w-full left-0 right-0 bg-secondary py-16">
-        <div className="max-w-7xl mx-auto flex flex-col gap-3.5 mb-10">
+        <div className="max-w-7xl mx-auto flex flex-col gap-3.5 mb-10 px-8">
           <IconStack />
           <h2 className="subtitle text-primary">Explore our Stacks</h2>
         </div>

@@ -5,14 +5,14 @@ import BookCall from "../bookCall";
 
 const Navbar = () => {
   return (
-    <div className="relative flex justify-between items-center">
+    <div className="mx-auto w-full relative flex justify-center md:justify-between items-center">
       <Image
         src={"/coworthlogo.png"}
         alt="metro labs logo"
         width={191}
         height={51}
       />
-      <div className="flex justify-between items-center gap-x-6">
+      <div className="hidden md:flex justify-between items-center gap-x-6">
         <ul className="flex justify-between items-center gap-x-4 body-base">
           <li>Portfolio</li>
           <li>Careers</li>
