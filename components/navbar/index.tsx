@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div className="relative flex justify-between items-center">
       <Image
-        src={"/metrolabslogo.svg"}
+        src={"/images/quick-sites.png"}
         alt="metro labs logo"
         width={191}
         height={51}

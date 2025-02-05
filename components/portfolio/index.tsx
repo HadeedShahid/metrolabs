@@ -237,6 +237,93 @@ const data = [
           />
         ),
       },
+
+      {
+        text: (
+          <>
+            <p className="mb-10">
+              <p>
+                The <strong>manage payment plan page</strong> enables users to
+                easily manage their subscription, <strong>change plans</strong>,
+                and <strong>add or update payment methods</strong>. With a
+                straightforward interface, users can quickly make adjustments to
+                fit their needs.
+              </p>
+            </p>
+          </>
+        ),
+        image: (
+          <Image
+            src="/images/edubridge/quiz-gen.png"
+            alt="Macbook mockup from Aceternity UI"
+            height="500"
+            width="500"
+            className="md:w-1/2 h-full w-full mx-auto object-cover"
+          />
+        ),
+      },
+      {
+        text: (
+          <>
+            <p className="mb-10">
+              The <strong>login</strong> and <strong>sign-up pages</strong>{" "}
+              offer a simple, user-friendly experience, allowing students to
+              quickly access their accounts or create new ones. With a clean
+              design and clear prompts, the process is seamless, ensuring
+              minimal friction for users.
+            </p>
+          </>
+        ),
+        image: (
+          <>
+            <Image
+              src="/images/edubridge/attemp-quiz.png"
+              alt="Macbook mockup from Aceternity UI"
+              height="500"
+              width="500"
+              className="md:w-1/2 h-full w-full mx-auto object-cover"
+            />
+            <Image
+              src="/images/edubridge/fill-blanks.png"
+              alt="Macbook mockup from Aceternity UI"
+              height="500"
+              width="500"
+              className="md:w-1/2 h-full w-full mx-auto object-cover"
+            />
+          </>
+        ),
+      },
+      {
+        text: (
+          <>
+            <p className="mb-10">
+              The <strong>login</strong> and <strong>sign-up pages</strong>{" "}
+              offer a simple, user-friendly experience, allowing students to
+              quickly access their accounts or create new ones. With a clean
+              design and clear prompts, the process is seamless, ensuring
+              minimal friction for users.
+            </p>
+          </>
+        ),
+        image: (
+          <>
+            <Image
+              src="/images/edubridge/feedback.png"
+              alt="Macbook mockup from Aceternity UI"
+              height="500"
+              width="500"
+              className="md:w-1/2 h-full w-full mx-auto object-cover"
+            />
+            <Image
+              src="/images/edubridge/feedback-bool.png"
+              alt="Macbook mockup from Aceternity UI"
+              height="500"
+              width="500"
+              className="md:w-1/2 h-full w-full mx-auto object-cover"
+            />
+          </>
+        ),
+      },
       {
         text: (
           <>
@@ -265,32 +352,24 @@ const data = [
         text: (
           <>
             <p className="mb-10">
-              The <strong>login</strong> and <strong>sign-up pages</strong>{" "}
-              offer a simple, user-friendly experience, allowing students to
-              quickly access their accounts or create new ones. With a clean
-              design and clear prompts, the process is seamless, ensuring
-              minimal friction for users.
+              <p>
+                The <strong>manage payment plan page</strong> enables users to
+                easily manage their subscription, <strong>change plans</strong>,
+                and <strong>add or update payment methods</strong>. With a
+                straightforward interface, users can quickly make adjustments to
+                fit their needs.
+              </p>
             </p>
           </>
         ),
         image: (
-          <>
-            <Image
-              src="https://upwork-usw2-prod-agora-file-storage.s3.us-west-2.amazonaws.com/profile/portfolio/thumbnail/442b68a8b758789020305bfd5310268b?response-content-disposition=inline;+filename=%22image_original%22;+filename*=utf-8%27%27image_original&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEkaCXVzLXdlc3QtMiJHMEUCID9ikqYgv6G/XaKiTX3y%2BIqQOzIwagaPq1ofvTcamXVRAiEAmaZR%2BzPzbVekWoSvzK0/lndwSuMXPUrCBKn6/b8Tk9kq1gQIkf//////////ARAAGgw3Mzk5MzkxNzM4MTkiDMjOHmNqVy81xzXQWiqqBI/LijwBJt9goZyLsvKTuK3M5BuaWYeGnnvbdrzn1dhWFvooTKmYOnb9d4fnnYGNimUQLHGg6/xORQdZg54pBLATNaHymM6KWBDq/NjyiOwTA7/QaKWCZCkZUG13dVcZF%2BsuuIIzttqZ2k8wqcq2CPUqKzOAkVav/3UFSLLE1QPmBgy6Unc6faSs649pB1v35DwJmGFnszWkBpKZ6ZjeNf0S76sXzxz1IwvFfySY4RsP/7RBYdNf6Lg1X7JsMxCUiPWqTuJADGa%2BVfeWB1YTLR7jvtv7OlvDNsq9FWdtC4WdWihNkBZlt/fOtHPwOocZT3Dg/rT7y4z0Esht3d/INqJGn9FkWQQV9VowFAyxPLtWc%2Bq/Cd7LspksNNAnuU/NHy8JNhHhdf%2BAPioZhrxbhf28mwgq1jovxMWeb3puWgChjDY8913FQT8Vb16VCKjMraQ6NkasuQnhmbCMbo3W1%2Bwsc0YJTbsd/LvauOe%2BjXiGQxrabmbDOr4MGVuG6AqOknqEWMp699P4X1grr67kWzdDa%2BFkcELhlGR/6T31%2BNhkOdT7FlhCynAmd8dGzh2N3%2B/uUJYf1ndXqNfzG2M5HCHNFNBgZ83Brm%2Bfy1tHR76gmV3BhEV2gWCkkZFHgnr%2B1VK8WlgWfDcOul%2B6wGuGIW/qb23GSQaQbarvvsZ/RI4m2zAvOVRPp1ViU7Nh0mC/W7jfx%2BFnXrBk3%2BlO4jHByQkJ3L8cDcF5Hbw7MOvC8LcGOqcBQgQQFgT9Zuf2NNJRWl/Dlprka0z4o2tyV7vOupXULM1Gi4%2B5TYjXBdEd3aecKOZwSifGjhhqiSi2GxT52hqNbg0UVAqkzaHcU2wLXvLvoes85oxJXbsbVVHmSa45dOEsS9y2bT%2BFyNNZWq3HEoxNrXywXaBmCggszCLea%2Brle%2BAfSYUsO4eZOc6WgWy9ZdrLufVHzSu57iEws/lGQIQz4VYK4%2BNNvvg=&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241001T163822Z&X-Amz-SignedHeaders=host&X-Amz-Expires=900&X-Amz-Credential=ASIA2YR6PYW557AMIYTY/20241001/us-west-2/s3/aws4_request&X-Amz-Signature=d7648e214155bb827fa3602c4fe51b54df6f5904eb72d516a280c7765e231682"
-              alt="Macbook mockup from Aceternity UI"
-              height="500"
-              width="500"
-              className="md:w-1/2 h-full w-full mx-auto object-cover"
-            />
-
-            <Image
-              src="https://upwork-usw2-prod-agora-file-storage.s3.us-west-2.amazonaws.com/profile/portfolio/thumbnail/565103364539e9293be4d658de0563f1?response-content-disposition=inline;+filename=%22image_original%22;+filename*=utf-8%27%27image_original&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEEkaCXVzLXdlc3QtMiJGMEQCIAg3yhONOISLk35WkuuDqJybXMTcFj0yIxrhfy%2BLRXybAiBqFjFJ63SqCBdG6EuyCcaZJptOggzTmxSfiMWP2diTxirWBAiS//////////8BEAAaDDczOTkzOTE3MzgxOSIMUEZ4CDfb/HWnJCiEKqoE0Cd3l5Nf9g5ZMOvx/4hH/KsdpgFuM7GyhJhC8onyi9e1L2FMXGTO64O%2BHpxvAcN91qE/6qPuiXuDFDqYnAGc1DJE6bXwyRLidwNQTdxkhvJKmSnO/Pbo6wOgPknr9VcI9GJMkzpF834UbfbUXXT/JrvTB1xx8CaXLKghVQStI74R%2BUwS4UvwqN4RNCpp1zjI%2BxG4bQ88cbhjHxvfJ0X6WneG4IBbKwQ4CGB1zub8rKMkRpGvELuEWpn934n5lMZ6SAZ9H9jRKcj/uWQfxqtWr6vYvuSpuYgrTRcqUVu6DAdLqnJ6F1hi153OUphjqLEnY6Pu8yuxIfYe3VqY8JzgR1pLu8rzOIikIhfBdBmrgiYHOfPViaPdZUJNkW0yfAA/IEmXXBdGPltYx2dXAnQV93qDuZ0hKh60OkuL/wJ5f/QHuDBeUzE6oPnrZO9AFj3RMqFU7BwfeTg9OBjQxvO0OlX3pYyJKE0t2SF6rALvrIGi39t13Q21laesXJ7IOgOeTPyKFt8sH5q6SptVacfhU4Ga5skn/y9omHYYYk1nuHuh6WKQwizG/sffHp2voermkgDCWYcH3m1bMK6puCrVygvMmeirM9WVJPdXtV66cVxtyD1fRA3cLzX6fGLqNKSAHWqofKBwwjT5YWhpRpYNVET6aMwuQzTN%2BhwhTtwBrR7Um%2BaJNl9VrWQjiErJa5WdSJoLN%2BbfDaCp6%2BTUa6ZpW4thq23DC54ZnOowu8jwtwY6qAENmK8/9ve34tYrIx%2BX76xm2Mvb51O9EPhnOjJxt8mqtlysAlWjWWiBSWVj2H%2Bib93kMflG28/DSTxV28k0ZkCU%2BaP%2BL%2Bi8ZUMhuksTw58VT6dyZdWvhqvpcMHFw5TR5TuiPRPBB7gao3fGevGcODJvWzE2HnsUq8MCLcfc90trutAJQiM86%2Bm6dn8OY%2BH6SPtYgKWWT4crmfVdJL8ht75TRkOpDoS5a%2BE=&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241001T163827Z&X-Amz-SignedHeaders=host&X-Amz-Expires=900&X-Amz-Credential=ASIA2YR6PYW53MMK5EPP/20241001/us-west-2/s3/aws4_request&X-Amz-Signature=017bec9cb0e770d5b8e14726b481b6e0583aa63f4fcaa0bf0a0a2a0abfb84642"
-              alt="Macbook mockup from Aceternity UI"
-              height="500"
-              width="500"
-              className="mt-10 md:w-1/2 h-full w-full mx-auto object-cover"
-            />
-          </>
+          <Image
+            src="/images/edubridge/payment-sub.png"
+            alt="Macbook mockup from Aceternity UI"
+            height="500"
+            width="500"
+            className="md:w-1/2 h-full w-full mx-auto object-cover"
+          />
         ),
       },
     ]),
