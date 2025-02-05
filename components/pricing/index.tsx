@@ -47,17 +47,15 @@ export default function Pricing() {
   ];
 
   return (
-    <div className="py-24 sm:py-32">
+    <div className="py-24 w-full">
       <div className="mx-auto max-w-7xl px-6 flex flex-col gap-y-4  lg:px-8">
         <div className="mx-auto flex flex-col gap-y-6 max-w-2xl text-center">
           <h2 className="subtitle">Pricing plans</h2>
           <p>
-            Get the website you need without breaking the bank. Our pricing is
-            clear, competitive, and tailored to fit your goals, whether you're
-            just starting or scaling up.
+           {" Get the website you need without breaking the bank. Our pricing is clear, competitive, and tailored to fit your goals, whether you're just starting or scaling up."}
           </p>
         </div>
-        <div className="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <div className="isolate mx-auto w-full mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {plans.map((plan) => (
             <div
               key={plan.name}

@@ -335,6 +335,93 @@ const data = [
           />
         ),
       },
+
+      {
+        text: (
+          <>
+            <p className="mb-10">
+              <p>
+                The <strong>manage payment plan page</strong> enables users to
+                easily manage their subscription, <strong>change plans</strong>,
+                and <strong>add or update payment methods</strong>. With a
+                straightforward interface, users can quickly make adjustments to
+                fit their needs.
+              </p>
+            </p>
+          </>
+        ),
+        image: (
+          <Image
+            src="/images/edubridge/quiz-gen.png"
+            alt="Macbook mockup from Aceternity UI"
+            height="500"
+            width="500"
+            className="md:w-1/2 h-full w-full mx-auto object-cover"
+          />
+        ),
+      },
+      {
+        text: (
+          <>
+            <p className="mb-10">
+              The <strong>login</strong> and <strong>sign-up pages</strong>{" "}
+              offer a simple, user-friendly experience, allowing students to
+              quickly access their accounts or create new ones. With a clean
+              design and clear prompts, the process is seamless, ensuring
+              minimal friction for users.
+            </p>
+          </>
+        ),
+        image: (
+          <>
+            <Image
+              src="/images/edubridge/attemp-quiz.png"
+              alt="Macbook mockup from Aceternity UI"
+              height="500"
+              width="500"
+              className="md:w-1/2 h-full w-full mx-auto object-cover"
+            />
+            <Image
+              src="/images/edubridge/fill-blanks.png"
+              alt="Macbook mockup from Aceternity UI"
+              height="500"
+              width="500"
+              className="md:w-1/2 h-full w-full mx-auto object-cover"
+            />
+          </>
+        ),
+      },
+      {
+        text: (
+          <>
+            <p className="mb-10">
+              The <strong>login</strong> and <strong>sign-up pages</strong>{" "}
+              offer a simple, user-friendly experience, allowing students to
+              quickly access their accounts or create new ones. With a clean
+              design and clear prompts, the process is seamless, ensuring
+              minimal friction for users.
+            </p>
+          </>
+        ),
+        image: (
+          <>
+            <Image
+              src="/images/edubridge/feedback.png"
+              alt="Macbook mockup from Aceternity UI"
+              height="500"
+              width="500"
+              className="md:w-1/2 h-full w-full mx-auto object-cover"
+            />
+            <Image
+              src="/images/edubridge/feedback-bool.png"
+              alt="Macbook mockup from Aceternity UI"
+              height="500"
+              width="500"
+              className="md:w-1/2 h-full w-full mx-auto object-cover"
+            />
+          </>
+        ),
+      },
       {
         text: (
           <>
@@ -356,6 +443,30 @@ const data = [
             height="500"
             width="500"
             className="md:w-2/3 h-full w-full mx-auto object-cover"
+          />
+        ),
+      },
+      {
+        text: (
+          <>
+            <p className="mb-10">
+              <p>
+                The <strong>manage payment plan page</strong> enables users to
+                easily manage their subscription, <strong>change plans</strong>,
+                and <strong>add or update payment methods</strong>. With a
+                straightforward interface, users can quickly make adjustments to
+                fit their needs.
+              </p>
+            </p>
+          </>
+        ),
+        image: (
+          <Image
+            src="/images/edubridge/payment-sub.png"
+            alt="Macbook mockup from Aceternity UI"
+            height="500"
+            width="500"
+            className="md:w-1/2 h-full w-full mx-auto object-cover"
           />
         ),
       },

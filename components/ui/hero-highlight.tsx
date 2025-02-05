@@ -10,7 +10,7 @@ export const HeroHighlight = ({
   return (
     <div
       className={cn(
-        "absolute h-screen w-full group top-0 left-0 -z-10",
+        "absolute h-[42rem] md:h-screen w-full group top-0 left-0 -z-10",
         containerClassName
       )}
     >

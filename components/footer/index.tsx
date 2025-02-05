@@ -9,7 +9,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="mt-48 mb-8 flex flex-col gap-6 justify-center items-center">
+    <div className="w-full mt-48 mb-8 flex flex-col gap-6 justify-center items-center">
       <Image
         src={"/metrolabslogo.svg"}
         alt="metro labs logo"

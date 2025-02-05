@@ -11,9 +11,9 @@ import { motion } from "framer-motion";
 export default function Faqs() {
   return (
     <>
-      <div className="mt-36 flex flex-col gap-10 ">
+      <div className="mt-36 flex flex-col gap-10 w-full">
         <h2 className="subtitle">Frequently asked questions (FAQs)</h2>
-        <Accordion type="single" collapsible className="w-2/3 space-y-4 ">
+        <Accordion type="single" collapsible className="w-full md:w-2/3 space-y-4">
           {faqsData.map((item, index) => (
             <AccordionItem
               key={index}
@@ -23,7 +23,7 @@ export default function Faqs() {
               <AccordionTrigger className="p-4">
                 {item.trigger}
               </AccordionTrigger>
-              <AccordionContent className="px-4 pb-4">
+              <AccordionContent className="px-4 pb-4 text-left">
                 {item.content}
               </AccordionContent>
             </AccordionItem>

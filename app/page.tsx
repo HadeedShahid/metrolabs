@@ -17,7 +17,7 @@ import { AnimatedTestimonialsDemo } from "@/components/testimonials";
 
 const Home = () => {
   return (
-    <div>
+    <div className="flex flex-col justify-between items-center md:items-baseline gap-y-32 md:gap-0">
       {/* <NavDock /> */}
       <Navbar />
       <Hero />

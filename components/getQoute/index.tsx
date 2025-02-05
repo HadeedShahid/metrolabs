@@ -41,7 +41,7 @@ import { qouteFormSchema } from "@/utils/formSchema";
 
 type BtnSize = "sm" | "medium" | "lg" | "icon" | "full";
 
-const GetQoute = ({ btnSize }: { btnSize: BtnSize }) => {
+const GetQoute = ({ btnSize, buttonClassname }: { btnSize: BtnSize, buttonClassname:string }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const form = useForm<z.infer<typeof qouteFormSchema>>({
@@ -77,7 +77,7 @@ const GetQoute = ({ btnSize }: { btnSize: BtnSize }) => {
         }}
       >
         <DialogTrigger asChild>
-          <Button size={btnSize}>Get a Qoute</Button>
+          <Button size={btnSize} className={buttonClassname}>Get a Qoute</Button>
         </DialogTrigger>
 
         <DialogContent>

@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body >
-        <div className="max-w-7xl mt-8 mx-auto">{children}</div>
+        <div className="px-7 md:px-0 max-w-7xl mt-8 mx-auto">{children}</div>
         <Analytics />
         <SpeedInsights />
       </body>
