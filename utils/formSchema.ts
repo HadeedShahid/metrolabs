@@ -12,3 +12,10 @@ export const qouteFormSchema = z.object({
     .min(1, { message: "Select a maintainance plan" }),
   budget: z.number().min(1, { message: "Select the project budget" }),
 });
+
+export const bookCallFormSchema = z.object({
+  name: z.string().min(1, { message: "Name is required" }).max(50),
+  email: z.string().min(1, { message: "Email is required" }).email(),
+  country: z.string().min(1, { message: "Country is required" }),
+  message: z.string().min(1, { message: "Message is required" }),
+});

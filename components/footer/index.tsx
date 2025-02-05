@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <div className="w-full mt-48 mb-8 flex flex-col gap-6 justify-center items-center">
       <Image
-        src={"/metrolabslogo.svg"}
+        src={"/images/quick-sites.png"}
         alt="metro labs logo"
         width={221}
         height={81}

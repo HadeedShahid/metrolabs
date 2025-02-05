@@ -3,7 +3,6 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import React, { MouseEventHandler, useState } from "react";
-import { Modal } from "antd";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -30,10 +29,11 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Label } from "@/components/ui/label";
 import { Input } from "../ui/input";
-import Link from "next/link";
 import { Textarea } from "../ui/textarea";
+import { countries } from "@/utils/constants";
+import { createLead } from "@/lib/actions";
+
 const BookCall = ({
   onClick = () => {},
 }: {
@@ -59,18 +59,20 @@ const BookCall = ({
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // setIsLoading(true);
-    console.log(values);
-    // setTimeout(() => {}, 2000);
-    // setIsLoading(false);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsLoading(true);
+    await createLead(values);
+    setIsLoading(false);
     form.reset();
+    setOpen(false);
   }
 
   return (
     <>
       <Dialog
+        open={open}
         onOpenChange={(e) => {
+          setOpen(e);
           if (!e) {
             form.reset();
           }
@@ -145,15 +147,11 @@ const BookCall = ({
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        <SelectItem value="m@example.com">
-                          m@example.com
-                        </SelectItem>
-                        <SelectItem value="m@google.com">
-                          m@google.com
-                        </SelectItem>
-                        <SelectItem value="m@support.com">
-                          m@support.com
-                        </SelectItem>
+                        {countries.map((country) => (
+                          <SelectItem key={country.value} value={country.value}>
+                            {country.label}
+                          </SelectItem>
+                        ))}
                       </SelectContent>
                     </Select>
                     <FormMessage />
