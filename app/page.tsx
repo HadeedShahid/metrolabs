@@ -11,10 +11,13 @@ import { HeroHighlight } from "@/components/ui/hero-highlight";
 import Hero from "@/components/hero";
 import { NavDock } from "@/components/navDock";
 import Footer from "@/components/footer";
+import Pricing from "@/components/pricing";
+import OurTeamSection from "@/components/ourTeam";
+import { AnimatedTestimonialsDemo } from "@/components/testimonials";
 
 const Home = () => {
   return (
-    <div>
+    <div className="flex flex-col justify-between items-center md:items-baseline gap-y-32 md:gap-0">
       {/* <NavDock /> */}
       <Navbar />
       <Hero />
@@ -23,6 +26,9 @@ const Home = () => {
       <OurClients />
       <ExploreStacks />
       <Portfolio />
+      <Pricing />
+      <OurTeamSection/>
+      <AnimatedTestimonialsDemo/>
       <Faqs />
       <Footer />
     </div>

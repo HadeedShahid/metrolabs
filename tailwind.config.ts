@@ -36,8 +36,8 @@ const config = {
         accent: "hsl(var(--color-accent))",
       },
       fontFamily: {
-        sans: ["var(--font-primary)"],
-        mono: ["var(--font-roboto-mono)"],
+        sans: ['var(--font-geist-sans)'],
+        mono: ['var(--font-geist-mono)'],
       },
       animation: {
         scroll:

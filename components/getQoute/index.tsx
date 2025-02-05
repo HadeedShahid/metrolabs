@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import React, { useState } from "react";
 import { Modal } from "antd";
-import { Button } from "@/components/ui/button";
+import { Button, ButtonProps } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -39,7 +39,9 @@ import { filterObj } from "@/utils/constants";
 import { getQouteCost } from "@/app/actions";
 import { qouteFormSchema } from "@/utils/formSchema";
 
-const GetQoute = () => {
+type BtnSize = "sm" | "medium" | "lg" | "icon" | "full";
+
+const GetQoute = ({ btnSize, buttonClassname }: { btnSize: BtnSize, buttonClassname:string }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const form = useForm<z.infer<typeof qouteFormSchema>>({
@@ -75,7 +77,7 @@ const GetQoute = () => {
         }}
       >
         <DialogTrigger asChild>
-          <Button>Get a Qoute</Button>
+          <Button size={btnSize} className={buttonClassname}>Get a Qoute</Button>
         </DialogTrigger>
 
         <DialogContent>

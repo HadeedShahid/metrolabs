@@ -12,10 +12,10 @@
 
 @layer utilities {
   .title-hero {
-    @apply text-7xl font-medium leading-[5.4rem] tracking-tighter;
+    @apply text-5xl md:text-8xl font-bold;
   }
   .desc-hero {
-    @apply text-xl font-light;
+    @apply text-sm md:text-xl font-light;
   }
   .body-small {
     @apply text-sm;
@@ -24,7 +24,7 @@
     @apply text-base;
   }
   .subtitle {
-    @apply text-3xl font-medium;
+    @apply text-3xl md:text-5xl font-bold;
   }
   .heading {
     @apply font-semibold text-2xl;
