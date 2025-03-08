@@ -13,8 +13,6 @@ export async function createLead(values: z.infer<typeof bookCallFormSchema>) {
       .insert(values)
       .select();
 
-    if (error) throw error;
-
     return { success: true };
   } catch (error) {
     return { success: false, error };

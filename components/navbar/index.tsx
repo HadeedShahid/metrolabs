@@ -14,10 +14,10 @@ const Navbar = () => {
       />
       <div className="hidden md:flex justify-between items-center gap-x-6">
         <ul className="flex justify-between items-center gap-x-4 body-base">
-          <li>Portfolio</li>
-          <li>Careers</li>
-          <li>Pricing</li>
-          <li>Contact</li>
+          {/* <li className="cursor-pointer">Portfolio</li> */}
+          {/* <li>Careers</li> */}
+          {/* <li>Pricing</li> */}
+          {/* <li>Contact</li> */}
         </ul>
         <BookCall />
       </div>

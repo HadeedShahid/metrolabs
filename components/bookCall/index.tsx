@@ -33,11 +33,14 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { countries } from "@/utils/constants";
 import { createLead } from "@/lib/actions";
+import FormLayout, { FeedbackData } from "../ui/form-layout";
 
 const BookCall = ({
-  onClick = () => {},
+  buttonText = "Book a Call",
 }: {
   onClick?: MouseEventHandler<HTMLButtonElement>;
+  buttonText?: string;
+  buttonClassname?: string;
 }) => {
   const [open, setOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -59,9 +62,25 @@ const BookCall = ({
     },
   });
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(
+    values: z.infer<typeof formSchema>,
+    {
+      onSuccess,
+      onError,
+    }: {
+      onSuccess: (data: FeedbackData) => void;
+      onError: (data: FeedbackData) => void;
+    }
+  ) {
     setIsLoading(true);
-    await createLead(values);
+    const response = await createLead(values);
+    if (response.success) {
+      onSuccess({
+        title: "Success",
+        description: "Your message has been sent successfully",
+      });
+    } else {
+    }
     setIsLoading(false);
     form.reset();
     setOpen(false);
@@ -69,33 +88,22 @@ const BookCall = ({
 
   return (
     <>
-      <Dialog
-        open={open}
-        onOpenChange={(e) => {
-          setOpen(e);
-          if (!e) {
-            form.reset();
-          }
+      <FormLayout
+        title="Contact us"
+        description="Book a call with us to discuss your project needs. We're here to assist with any inquiries and provide tailored solutions."
+        triggerContent={buttonText}
+        buttonProps={{
+          variant: "secondary",
+          size: "lg",
         }}
       >
-        <DialogTrigger asChild>
-          <Button onClick={onClick} variant={"secondary"}>
-            Book a Call
-          </Button>
-        </DialogTrigger>
-        <DialogContent className="w-full ">
-          <DialogHeader>
-            <DialogTitle>Contact us</DialogTitle>
-            <DialogDescription>
-              {
-                "Book a call with us to discuss your project needs. We're here to assist with any inquiries and provide tailored solutions."
-              }
-            </DialogDescription>
-          </DialogHeader>
+        {({ onSuccess, onError }) => (
           <Form {...form}>
             <form
               id="contact-form"
-              onSubmit={form.handleSubmit(onSubmit)}
+              onSubmit={form.handleSubmit((values) =>
+                onSubmit(values, { onSuccess, onError })
+              )}
               className="space-y-6"
             >
               <FormField
@@ -178,8 +186,8 @@ const BookCall = ({
               </DialogFooter>
             </form>
           </Form>
-        </DialogContent>
-      </Dialog>
+        )}
+      </FormLayout>
     </>
   );
 };

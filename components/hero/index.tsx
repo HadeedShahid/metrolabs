@@ -15,10 +15,8 @@ const Hero = () => {
       </div>
 
       <div className="flex flex-row gap-x-4">
-        <GetQoute btnSize={"lg"} buttonClassname="h-9 rounded-md px-3"  />
-        <Button variant={"secondary"} size={"lg"} className="h-9 rounded-md px-3">
-          Start Your Project Today
-        </Button>
+        <GetQoute />
+        <BookCall buttonText="Start Your Project Today" />
       </div>
     </div>
   );
