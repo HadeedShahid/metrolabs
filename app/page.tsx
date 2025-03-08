@@ -27,7 +27,7 @@ const Home = () => {
       <ExploreStacks />
       <Portfolio />
       <Pricing />
-      <OurTeamSection/>
+      {/* <OurTeamSection/> */}
       <AnimatedTestimonialsDemo/>
       <Faqs />
       <Footer />
